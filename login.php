@@ -70,23 +70,34 @@ if (isset($_POST["login"])) {
 <html>
   <head>
   <meta charset="UTF-8">
-  <title>サンプルアプリケーション</title>
-  </head>
-  <body>
-  <h1>ログイン機能　サンプルアプリケーション</h1>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Sirop ログイン</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <style>
+        input[type="text"],input[type="password"]{
+	        width:259px;
+            height:50px;
+        }
+        </style>
+</head>
+  <body><div class="container"><br>
   <!-- $_SERVER['PHP_SELF']はXSSの危険性があるので、actionは空にしておく -->
   <!--<form id="loginForm" name="loginForm" action="<?php print($_SERVER['PHP_SELF']) ?>" method="POST">-->
   <form id="loginForm" name="loginForm" action="" method="POST">
   <fieldset>
-  <legend>ログインフォーム</legend>
+  <legend>お帰りなさい！</legend>
+  <p>Siropユーザーアカウントでログインしてください。</p>
   <div><?php echo $errorMessage ?></div>
-  <label for="userid">ユーザID</label><input type="text" id="userid" name="userid" value="<?php echo htmlspecialchars($_POST["userid"], ENT_QUOTES); ?>">
-  <br>
-  <label for="password">パスワード</label><input type="password" id="password" name="password" value="">
-  <br>
+  <label for="userid">ユーザーID</label><br>
+                        <input type="text" id="userid" name="userid" value="<?php echo htmlspecialchars($_POST["userid"], ENT_QUOTES); ?>">
+<br>
+  <label for="password">パスワード</label><br>
+                        <input type="password" id="password" name="password" value=""><br>
   <input type="submit" id="login" name="login" value="ログイン">
   </fieldset>
   </form>
-  <a href="add.html">ユーザー情報登録ページへ</a>
-  </body>
+  <br><a href="add.html">ユーザー情報登録ページへ</a>
+</div></body>
 </html>
+
