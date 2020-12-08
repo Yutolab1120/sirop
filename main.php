@@ -17,8 +17,8 @@ if (!isset($_SESSION["USERID"])) {
     <title>Sirop ダッシュボード</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   </head>
-  <body><div class="container">
-  <h1>Sirop</h1>
+  <body><div class="container"><br>
+    <legend>Sirop</legend>
   <!-- ユーザIDにHTMLタグが含まれても良いようにエスケープする -->
   <p>ようこそ<?=htmlspecialchars($_SESSION["USERID"], ENT_QUOTES); ?>さん</p>
   <ul>

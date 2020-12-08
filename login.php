@@ -90,11 +90,11 @@ if (isset($_POST["login"])) {
   <p>Siropユーザーアカウントでログインしてください。</p>
   <div><?php echo $errorMessage ?></div>
   <label for="userid">ユーザーID</label><br>
-                        <input type="text" id="userid" name="userid" value="<?php echo htmlspecialchars($_POST["userid"], ENT_QUOTES); ?>">
+                        <input placeholder="User-ID" type="text" id="userid" name="userid" value="<?php echo htmlspecialchars($_POST["userid"], ENT_QUOTES); ?>">
 <br>
   <label for="password">パスワード</label><br>
-                        <input type="password" id="password" name="password" value=""><br>
-  <input type="submit" id="login" name="login" value="ログイン">
+                        <input placeholder="********" type="password" id="password" name="password" value=""><br>
+  <br><input class="btn btn-outline-primary" type="submit" id="login" name="login" value="ログイン">
   </fieldset>
   </form>
   <br><a href="add.html">ユーザー情報登録ページへ</a>
