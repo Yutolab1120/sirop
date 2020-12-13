@@ -75,29 +75,36 @@ if (isset($_POST["login"])) {
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <style>
-        input[type="text"],input[type="password"]{
+        input[type="text"],input[type="password"],input[type="submit"] {
 	        width:259px;
             height:50px;
         }
         </style>
 </head>
-  <body><div class="container"><br>
+  <body>
+    <!-- Just an image -->
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="">
+    <img src="img/sirop.png" width="100" height="40" alt="">
+  </a>
+</nav>
+<div class="container"><br>
+
   <!-- $_SERVER['PHP_SELF']はXSSの危険性があるので、actionは空にしておく -->
   <!--<form id="loginForm" name="loginForm" action="<?php print($_SERVER['PHP_SELF']) ?>" method="POST">-->
   <form id="loginForm" name="loginForm" action="" method="POST">
   <fieldset>
-  <legend>お帰りなさい！</legend>
-  <p>Siropユーザーアカウントでログインしてください。</p>
-  <div><?php echo $errorMessage ?></div>
-  <label for="userid">ユーザーID</label><br>
-                        <input placeholder="User-ID" type="text" id="userid" name="userid" value="<?php echo htmlspecialchars($_POST["userid"], ENT_QUOTES); ?>">
+  <legend><center><b>お帰りなさい！</b></center></legend>
+  <center>Siropアカウントでログインしてください。</center>
+ <center><div><?php echo $errorMessage ?></div></center>
 <br>
-  <label for="password">パスワード</label><br>
-                        <input placeholder="********" type="password" id="password" name="password" value=""><br>
-  <br><input class="btn btn-outline-primary" type="submit" id="login" name="login" value="ログイン">
+    <center><input placeholder="ユーザーID" type="text" id="userid" name="userid" value="<?php echo htmlspecialchars($_POST["userid"], ENT_QUOTES); ?>"></center><br>
+    <center><input placeholder="パスワード" type="password" id="password" name="password" value=""></center>
+    <br><br><center><input class="btn btn-outline-primary" type="submit" id="login" name="login" value="ログイン"></center>
+
   </fieldset>
   </form>
-  <br><a href="add.html">ユーザー情報登録ページへ</a>
+  <br><center><a href="add.html">新規登録</a></center>
 </div></body>
 </html>
 

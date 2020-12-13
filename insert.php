@@ -33,14 +33,14 @@ $sql = "INSERT INTO login (name, password) VALUES ('$name','$hashpass')";
 $result_flag = mysql_query($sql);
 
 if (!$result_flag) {
-    die('INSERTクエリーが失敗しました。すでに同じNAMEが登録されている可能性があります。<br><a href="add.html">戻る</a>');
+    die('<br>申し訳ありません。既に同じユーザー名が登録されています。お手数ですが もう一度お試しください。<br><br><a href="add.html">登録ページに戻る</a>');
 }
 
-print('<p>' . $name . 'ユーザーを登録しました。</p>');
+print('<br><p>' . $name . ' さん を登録しました。</p>');
 
 $close_flag = mysql_close($link);
 
 ?>
-  <a href="add.html">戻る</a>
+  <a href="login.php">ログインページへ移動</a>
 </div></body>
 </html>

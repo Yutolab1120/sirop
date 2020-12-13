@@ -33,7 +33,7 @@ $_SESSION = array();
    <legend>ログアウト</legend>
   <div><?php echo $errorMessage; ?></div>
   <ul>
-  <li><a href="login.php">ログイン画面に戻る</a></li>
+  <li><a href="index.html">ホームに戻る</a></li>
   </ul>
 </div></body>
 </html>
